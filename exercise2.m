@@ -4,19 +4,20 @@
 %shown in the figure). We can define these polygons by the coordinates
 %of the vertices and the triangles defined by these vertices. Then:
 
-%1.-Decidewhich triangle the point p=(0.8,0.7) belongs to. 
+%1.-Decide which triangle the point p=(0.8,0.7) belongs to. 
 %2.-Assume the temperature at the vertex placed at the point (x,y), 
 %T(x,y), is T(0,0)=10ºC, T(1,0)=20ºC, T(1,1)=30ºC, T(0,1)=40ºC, and 
 %T(0.5,0.5)=50ºC. Then, compute the interpolated temperature at point p.
 
-%Files required: 
+%Files required:
+
 %plotTriangMesh.m: uncompress this file from additionalFiles.zip 
 %baryCoord.m
 
 %Be sure they're placed in the current folder!
 
-%You can download dditionalFiles.zip from Toni Susin's Numerical Factory.
-
+%You can download meshFilesAll.rar and additionalFiles.zip from Toni
+%Susin's Numerical Factory.
 
 clearvars
 close all

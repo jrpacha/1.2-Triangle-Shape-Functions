@@ -4,6 +4,11 @@
 %and compute the associated point on the Original Triangle. Observe that 
 %the barycentric coordinates are the same and the point obtained is (2,2)
 
+%Files required:
+% baryCoordQuad.m
+
+%Be sure it is placed in the current folder!
+
 clearvars
 close all
 

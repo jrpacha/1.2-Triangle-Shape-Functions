@@ -1,3 +1,11 @@
+%computeBC.m: compute barycantric coordinates of a point p w.r.t. a given
+%triangle.
+
+%Files required:
+% baryCoordQuad.m
+
+%Be sure it is placed in the current folder!
+
 clearvars
 close all
 

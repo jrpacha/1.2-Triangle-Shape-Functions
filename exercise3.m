@@ -1,4 +1,4 @@
-%exercise3: interpolate temperature in a triangle mesh
+%exercise3.m: interpolate temperature in a triangle mesh
 
 %Extra files required:
 %meshHole.m: uncompress this file from meshFilesAll.rar
