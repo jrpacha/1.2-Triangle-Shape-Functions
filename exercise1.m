@@ -1,9 +1,11 @@
-clearvars
-close all
-%Exercise 1.1: Point correspondence
+%exercise1.m: point correspondence
+
 %Consider now the obtained point on the Reference Triangle pR=(0.4,0.2) 
 %and compute the associated point on the Original Triangle. Observe that 
 %the barycentric coordinates are the same and the point obtained is (2,2)
+
+clearvars
+close all
 
 vertexsR = [0,0;
     1,0;

@@ -1,4 +1,4 @@
-%Exercise 2: Several Triangles
+%exercise2.m: Several Triangles
 
 %Let's consider now four triangles adding a central vertex (as it is 
 %shown in the figure). We can define these polygons by the coordinates
