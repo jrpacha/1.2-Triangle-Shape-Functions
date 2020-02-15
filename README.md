@@ -1,12 +1,10 @@
-# matlabSession-240032_17-09-2019
+# Practice 1.2. Triangle Shape Functions
 
-Matlab session Tuesday 17-09-2019
-
-P1.2 - Triangle Shape Functions. Session's source code. 
+P1.2-Triangle Shape Functions. Session's source code. 
 
 You can find the session's guide ---together with other extra material files---at Toni Susin's 'Numerical Factory', 
 
-https://numfactory.upc.edu/web/FiniteElements.html
+https://numfactory.upc.edu/blog/2018/09/03/finite-element-introduction-course/
 
 Disclaimer: this stuff is provided 'as is'. Please, chek it (just in case you find it useful), but it's worth you try to write all the programs on your own.
 
