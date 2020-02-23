@@ -37,7 +37,7 @@ fprintf(fmt,pR,pK,pR,alphasR,pK,alphasK) %Barycebtric coordinates of point
 linePlot=[pR;pK]; %to plot a line joining pR on R and its image, pK on K
 
 vplotR=[vertexsR;vertexsR(1,:)]; %Add the 1st. point at the last row,
-vplotK=[vertexsK;vertexsK(1,:)];  %just to plot closed triangles. 
+vplotK=[vertexsK;vertexsK(1,:)]; %just to plot closed triangles. 
 
 %plot the reference triangle, R, and point pR: 
 plot(vplotR(:,1),vplotR(:,2),'-','color','black')
