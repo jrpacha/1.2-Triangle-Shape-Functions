@@ -9,7 +9,7 @@ Toni Susin's 'Numerical Factory',
 https://numfactory.upc.edu/blog/2018/09/03/finite-element-introduction-course/
 
 #### Credits 
-prof. Rafael Ramírez found out a way for tracking the mouse. These methods are used
+Prof. Rafael Ramírez found out a way for tracking the mouse. These methods are used
 here in function **tR2tK** (in <tt>tR2tK.m</tt>), so he deserves the merit.
 
 #### Disclaimer
