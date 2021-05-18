@@ -13,7 +13,7 @@ Prof. Rafael Ramírez found out a way for tracking the mouse. These methods are 
 here in function **tR2tK** (in <tt>tR2tK.m</tt>), so he deserves the merit.
 
 #### Disclaimer
-Disclaimer: this stuff is provided 'as is'. Please, chek it (just in case you find 
+Disclaimer: this stuff is provided 'as is'. Please, check it (just in case you find 
 it useful), but it's worth you try to write all the programs on your own.
 
 If you find any mistakes (or have any suggestions), please report them to 
