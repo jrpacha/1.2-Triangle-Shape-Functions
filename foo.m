@@ -10,8 +10,8 @@ numElem = size(elem,1);
 
 T = (1:numNodes)'; %Temperatures at nodes
 
-numbering = 0;
 %plotElements(nodes, elem, numbering);
+numbering = 0;
 plotElementsOld(nodes, elem, numbering);
 hold on
 plot(p(1,1),p(1,2),'o','Marker','o','MarkerFaceColor','red');
