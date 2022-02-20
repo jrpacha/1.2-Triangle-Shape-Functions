@@ -23,6 +23,12 @@ numElem=size(elem,1); %number of elements
 temp=1:numNod; %temperature at each node. Just an example!
 temp=temp(:);
 
+%Draw the mesh, and mark the point p and its element's nodes
+plotElementsOld(nodes,elem,0); %third argument is 0: labels not shown
+hold on
+plot(p(1,1),p(1,2),'ro','Marker','o',...
+    'MarkerFaceColor','red','MarkerSize',5)
+
 for e=1:numElem
     %vertexsElem=nodes(elem(e,:),:);
     n1=elem(e,1);
@@ -32,7 +38,13 @@ for e=1:numElem
     v2=nodes(n2,:);
     v3=nodes(n3,:);
     vertexs=[v1;v2;v3];
+    %plot(vertexs(:,1),vertexs(:,2),'og','Marker','o',...
+    %     'MarkerFaceColor','green','MarkerSize',4)
     [alphasElem,isInside]=baryCoord(vertexs,p);
+    title({['Barycentric coordinates of point P w.r.t. element ',...
+        num2str(e)],['$\alpha = ($',num2str(alphasElem(1)),', ',...
+        num2str(alphasElem(2)),', ',...
+        num2str(alphasElem(3)),')']},'interpreter','LaTeX')
     if (isInside >= 1)
         elemP = e;
         nodsElem = [n1;n2;n3];
@@ -40,9 +52,13 @@ for e=1:numElem
         interpTemp=alphasElem(1)*temp(n1)+ ... %Interpolate temp.
                    alphasElem(2)*temp(n2)+ ...
                    alphasElem(3)*temp(n3);
+        fill(vertexs(:,1), vertexs(:,2),'red')
         break;       
     end
+    fill(vertexs(:,1),vertexs(:,2),'green')
+    pause(0.25);
 end
+hold off
 
 %Fancy output with fprintf: don't try this at exams!
 fprintf('-----------------------------------------------------\n')
@@ -65,12 +81,3 @@ elemP
 nods=[n1,n2,n3]
 vertexsElem
 interpTemp
-
-%Draw the mesh, and mark the point p and its element's nodes
-plotElementsOld(nodes,elem,0); %third argument is 0: labels not shown
-hold on
-plot(p(1,1),p(1,2),'ro','Marker','o',...
-    'MarkerFaceColor','red','MarkerSize',5)
-plot(vertexsElem(:,1),vertexsElem(:,2),'og','Marker','o',...
-    'MarkerFaceColor','green','MarkerSize',4)
-hold off
