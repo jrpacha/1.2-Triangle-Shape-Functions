@@ -40,44 +40,32 @@ for e=1:numElem
     vertexs=[v1;v2;v3];
     %plot(vertexs(:,1),vertexs(:,2),'og','Marker','o',...
     %     'MarkerFaceColor','green','MarkerSize',4)
-    [alphasElem,isInside]=baryCoord(vertexs,p);
+    [alphas,isInside]=baryCoord(vertexs,p);
     title({['Barycentric coordinates of point P w.r.t. element ',...
-        num2str(e)],['$\alpha = ($',num2str(alphasElem(1)),', ',...
-        num2str(alphasElem(2)),', ',...
-        num2str(alphasElem(3)),')']},'interpreter','LaTeX')
+        num2str(e)],['$\alpha = ($',num2str(alphas(1)),', ',...
+        num2str(alphas(2)),', ',...
+        num2str(alphas(3)),')']},'interpreter','LaTeX')
     if (isInside >= 1)
         elemP = e;
         nodsElem = [n1;n2;n3];
         vertexsElem = vertexs;
-        interpTemp=alphasElem(1)*temp(n1)+ ... %Interpolate temp.
-                   alphasElem(2)*temp(n2)+ ...
-                   alphasElem(3)*temp(n3);
-        fill(vertexs(:,1), vertexs(:,2),'red')
+        interpTemp=alphas(1)*temp(n1)+ ... %Interpolate temp.
+                   alphas(2)*temp(n2)+ ...
+                   alphas(3)*temp(n3);
+        fill(vertexs(:,1), vertexs(:,2),'red') % fill the element in red
+        % Write for the element holdig the point P, its nodes and their
+        % coordinates
+        fprintf(1,'Point: p=(%f,%f)\n',p);
+        fprintf('Elem: %d\n',elemP)
+        fprintf('Nodes: %d,%d,%d\n',nodsElem)
+        fprintf('%20s\n','Vertexs Coords.')
+        fprintf('%7s%11s\n','X','Y')
+        fprintf('%12.5e%12.5e\n',vertexsElem')
+        fprintf('Interpolated Temp.: T(%f,%f) = %.4f%cC\n',...
+            p,interpTemp,char(176))
         break;       
     end
-    fill(vertexs(:,1),vertexs(:,2),'green')
+    fill(vertexs(:,1),vertexs(:,2),'green') % fill the element in green
     pause(0.25);
 end
 hold off
-
-%Fancy output with fprintf: don't try this at exams!
-fprintf('-----------------------------------------------------\n')
-fprintf('Fancy output, don''t try this at the exams!!\n')
-fprintf('-----------------------------------------------------\n')
-fprintf(1,'Point: p=(%f,%f)\n',p);
-fprintf('Elem: %d\n',elemP)
-fprintf('Nodes: %d,%d,%d\n',nodsElem)
-fprintf('%20s\n','Vertexs Coords.')
-fprintf('%7s%11s\n','X','Y')
-fprintf('%12.5e%12.5e\n',vertexsElem')
-fprintf('Interpolated Temp.: T(%f,%f) = %.4f%cC\n',...
-        p,interpTemp,char(176))
-fprintf('-----------------------------------------------------\n\n')    
-% A faster way to show the results
-fprintf('A faster way to show the results...\n')
-format short e
-p
-elemP
-nods=[n1,n2,n3]
-vertexsElem
-interpTemp
