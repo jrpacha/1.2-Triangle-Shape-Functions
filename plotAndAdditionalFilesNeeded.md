@@ -3,7 +3,7 @@
 1. From <tt>MeshFilesAll.zip</tt>: 
    * <tt>meshHole.m</tt>
    
-You can download <tt>meshFilesAll.zip</tt> from professor Antonnio Susin's
+You can download <tt>meshFilesAll.zip</tt> from professor Antonio Susin's
 website,
 
 https://numfactory.upc.edu/numfactory/subjects/FEM/Extra/meshFilesAll.zip
