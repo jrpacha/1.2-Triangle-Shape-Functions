@@ -42,7 +42,7 @@ elem=[
 temp=10:10:50; %Temperatures at the nodes, according to the stated 
                %global numeration.
                
-figure()
+%figure()
 plotElements(nodes,elem,1);
 hold on
 plot(p(1,1),p(1,2),'o','Marker','o',...

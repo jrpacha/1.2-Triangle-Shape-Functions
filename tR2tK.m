@@ -23,9 +23,13 @@ function tR2tK(vertexsK)
 % I've stolen the method for tracking the mouse from professor Rafael 
 % Ramírez; so all the credits must go to him! 
 
-vertexsR = [0,0;
-    1,0;
-    0,1]; %vertexs of the reference triangle, TR
+% % vertexsR = [0,0;
+% %     1,0;
+% %     0,1]; %vertexs of the reference triangle, TR
+
+vertexsR = [2,1;
+    -1,-1;
+    4,-2]; %Take R some differient triangle (not the reference triangle)
 
 A=[ones(3,1),vertexsR];
 C=A\eye(3); %To compute the barycentric coordinates
